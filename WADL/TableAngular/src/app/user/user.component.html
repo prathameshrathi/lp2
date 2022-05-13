@@ -1,0 +1,37 @@
+
+
+<input type="text" placeholder="Enter value1 ..." class="form-control" [(ngModel)]="value1">
+<input type="text" placeholder="Enter value2 ..." class="form-control" [(ngModel)]="value2">
+<button (click)="handleAdd()">SUBMIT</button>
+
+<hr>
+
+<h2 class="new">Table</h2>
+
+<span *ngFor="let value of matrix1">
+    <span *ngIf="isDone(value)">
+        {{value}}
+    </span>
+    <span *ngIf="!isDone(value)">
+      {{value}}
+      <br/>
+    </span>
+
+  </span>
+
+  <hr/>
+
+  <span *ngFor="let value2 of matrix2">
+    <span *ngIf="isDone2(value2)">
+        {{value2}}
+    </span>
+    <span *ngIf="!isDone2(value2)">
+      {{value2}}
+      <br/>
+    </span>
+
+  </span>
+
+
+  <hr/>
+
